@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body {
+        background-color: #6c6c6c;
+      }
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin: 40px;
+      }
+      .card {
+        width: 300px;
+        color: #fefefe;
+        background-color: rgb(104, 76, 136);
+        border-radius: 30px;
+        box-shadow: 5px 5px 5px rgb(81, 60, 105);
+      }
+      .card > img {
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      .card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.3em;
+      }
+      .card-text > h3 {
+        font-size: 1.3em;
+        font-weight: 400;
+        font-family: Impact, Arial, sans-serif;
+        text-shadow: 1px 1px 2px black;
+      }
+      .card-text > p.Price {
+        font-size: 1.6em;
+        font-family: "Segoe UI", Verdana, sans-serif;
+        margin: 10px 0;
+        color: aqua;
+        text-shadow: 1px 1px 2px rgb(162, 222, 222);
+      }
+      .card-text:last-child {
+        text-align: center;
+        margin: 10px 0 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/005/886/544/non_2x/young-black-woman-listening-to-music-with-wireless-headphones-outdoors-photo.jpg"
+          alt="Card1 Image"
+          width="200"
+          height="300"
+        />
+        <fiv class="card-text">
+          <h3>HEADPHONE</h3>
+          <p class="Price">29,99</p>
+          <p>Lorem Ipsum</p>
+        </fiv>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/200" alt="Card2 Image" />
+        <fiv class="card-text">
+          <h3>HEADPHONE</h3>
+          <p class="Price">29,99</p>
+          <p>Lorem Ipsum</p>
+        </fiv>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/200" alt="Card3 Image" />
+        <fiv class="card-text">
+          <h3>HEADPHONE</h3>
+          <p class="Price">29,99</p>
+          <p>Lorem Ipsum</p>
+        </fiv>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/200" alt="Card1 Image" />
+        <fiv class="card-text">
+          <h3>HEADPHONE</h3>
+          <p class="Price">29,99</p>
+          <p>Lorem Ipsum</p>
+        </fiv>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/200" alt="Card1 Image" />
+        <fiv class="card-text">
+          <h3>HEADPHONE</h3>
+          <p class="Price">29,99</p>
+          <p>Lorem Ipsum</p>
+        </fiv>
+      </div>
+    </div>
+  </body>
+</html>

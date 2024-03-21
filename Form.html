@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <style>
+      label {
+        font-size: 2rem;
+      }
+      form {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--action = url/uri to the server that get the form-->
+    <!--should be "post" normally and not get-->
+    <form action="/formsubmit" method="get">
+      <label for="">Username:</label>
+      <input type="text" name="username" id="username" />
+
+      <label for="Password">Password</label>
+      <input
+        type="password"
+        name="Password"
+        id="Password"
+      /><!--Automatically hides input-->
+
+      <label for="date">Birthdate</label>
+      <input type="date" name="birthdate" id="birthdate" /><!--calendar is inserted-->
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+
+      <input type="submit" value="Send!" /><!--submits entry-->
+      <input type="reset" value="Reset!" /><!--Empties entry-->
+    </form>
+  </body>
+</html>
