@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        background: linear-gradient(
+          180deg,
+          rgba(55, 7, 59, 1) 0%,
+          rgba(14, 173, 177, 1) 100%
+        );
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+        margin: 0;
+        padding: 0;
+        color: #fefefe;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        display: grid;
+        width: 600px;
+        grid-template-columns: 1fr 1fr;
+        margin: 40px;
+        position: absolute;
+      }
+      form > h2 {
+        grid-column: span 2;
+        border-bottom: 2px solid #8c8c8c;
+      }
+      form > p {
+        grid-column: span 2;
+      }
+      form > input[type="submit"] {
+        grid-column: span 2;
+      }
+      form > .formgroup {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+      }
+      form > .formgroup > input {
+        width: 200px;
+        border-radius: 5px;
+      }
+
+      .radiogroup {
+        grid-column: span 2;
+      }
+      .radiogroup > .gender {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      .radiogroup > label {
+        margin-right: 20px;
+        font-size: 1.1em;
+      }
+      @media only screen and (max-width:650px){
+        form{grid-template-columns: 1fr;min-width: fit-content;margin: 20px;}
+        form>h2,.radiogroup,form>input[type="submit"],form>p{grid-column: auto;}
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/formresult" method="get">
+      <h2>Registration</h2>
+      <div class="formgroup">
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="Full name"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="E-mail" />
+      </div>
+      <div class="formgroup">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+      </div>
+      <div class="formgroup">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="formgroup">
+        <label for="password2">Confirm Password</label>
+        <input
+          type="password"
+          name="password2"
+          id="password2"
+          placeholder="Password"
+        />
+      </div>
+      <div class="radiogroup">
+        <div class="gender">Gender</div>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="other" />
+        <label for="other">Other</label>
+      </div>
+      <p></p>
+      <p>
+        By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies
+        Policy. You may receive SMS notifications from us and can opt out at any
+        time
+      </p>
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>
